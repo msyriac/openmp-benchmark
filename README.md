@@ -1,6 +1,6 @@
 # openmp-benchmark
 
-**`openmp-benchmark`** is a lightweight Python CLI tool that benchmarks OpenMP-enabled Python scripts by varying the number of threads. It provides accurate timing by executing the compute-heavy portion inside a subprocess (with correct `OMP_NUM_THREADS` control), and excludes Python import/startup overhead.
+**`openmp-benchmark`** is a lightweight Python CLI tool that benchmarks OpenMP-enabled Python scripts by varying the number of OpenMP threads. It executes external scripts (that must follow certain restrictions, see below) inside a subprocess with correct `OMP_NUM_THREADS` control, and extracts timing from the output of the external script.
 
 ---
 
@@ -54,7 +54,7 @@ The script you benchmark must:
 1. Perform computation using OpenMP-parallelizable libraries (e.g.certain `numpy` functions)
 2. Measure and `print()` the compute time (as a float in seconds) **with no extra output**
 
-### ✅ Example: `example_script.py`
+### Example: `example_script.py`
 
 With the numpy dot product example in `examples/`
 
