@@ -60,7 +60,7 @@ def plot_results(df,output):
     plt.grid(True, linestyle="--", alpha=0.6)
     plt.axhline(y=0,ls='--',color='k')
     plt.tight_layout()
-    plt.savefig(output+'.png')
+    plt.savefig(output+'.png',dpi=300)
 
 def main():
     parser = argparse.ArgumentParser(description="Benchmark OpenMP-enabled Python code")

@@ -79,7 +79,7 @@ if __name__ == "__main__":
 
 we get the following plot
 
-![Bencmark Results](examples/benchmark_results.png)
+<img src="examples/benchmark_results.png" alt="Benchmark plot" width="500"/>
 
 Other specialized examples (e.g. for CMB map analysis) can be found in the `examples/` directory.
 
