@@ -36,14 +36,14 @@ openmp-benchmark example_script.py --min-threads 2 --max-threads 10 --step-threa
 
 ### Command-line Options
 
-| Option           | Description                                          | Default                  |
-|------------------|------------------------------------------------------|--------------------------|
-| `--min-threads`  | Minimum number of OpenMP threads to test             | `2`                      |
-| `--max-threads`  | Maximum number of OpenMP threads to test             | `20`                     |
-| `--step-threads` | Number of OpenMP threads to step by                  | `2`                      |
-| `--repeat`       | Number of repetitions per thread count               | `3`                      |
-| `--output`       | Output CSV/PNG filename                              | `benchmark_results`      |
-| `--no-plot`      | Disable plot generation                              | Off (plot is shown)      |
+| Option           | Description                                          | Default                                       |
+|------------------|------------------------------------------------------|-----------------------------------------------|
+| `--min-threads`  | Minimum number of OpenMP threads to test                                  | `2`                      |
+| `--max-threads`  | Maximum number of OpenMP threads to test                                  | `20`                     |
+| `--step-threads` | Number of OpenMP threads to step by                                       | `2`                      |
+| `--repeat`       | Number of repetitions of the compute, to average down noise               | `3`                      |
+| `--output`       | Output CSV/PNG filename                                                   | `benchmark_results`      |
+| `--no-plot`      | Disable plot generation                                                   | Off (plot is shown)      |
 
 ---
 
