@@ -51,7 +51,7 @@ openmp-benchmark example_script.py --min-threads 2 --max-threads 10 --step-threa
 
 The script you benchmark must:
 
-1. Perform computation using OpenMP-parallelizable libraries (e.g., `numba`, `numpy`, `scipy`)
+1. Perform computation using OpenMP-parallelizable libraries (e.g.certain `numpy` functions)
 2. Measure and `print()` the compute time (as a float in seconds) **with no extra output**
 
 ### ✅ Example: `example_script.py`
