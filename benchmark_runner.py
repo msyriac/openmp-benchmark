@@ -61,16 +61,6 @@ def plot_results(df,output):
     plt.axhline(y=0,ls='--',color='k')
     plt.tight_layout()
     plt.savefig(output+'.png')
-    
-    # plt.figure()
-    # plt.plot(df["Threads"], 1./df["Avg Time (s)"], marker='o')
-    # plt.xlabel("Number of Threads")
-    # plt.ylabel("Average Execution Speed ($s^{-1}$)")
-    # plt.title(f"OpenMP Performance vs Threads for {output}")
-    # plt.grid(True)
-    # plt.axhline(y=0,ls='--',color='k')
-    # plt.tight_layout()
-    # plt.savefig(output+'.png')
 
 def main():
     parser = argparse.ArgumentParser(description="Benchmark OpenMP-enabled Python code")
@@ -78,7 +68,7 @@ def main():
     parser.add_argument("--min-threads", type=int, default=2, help="Minimum thread count to test")
     parser.add_argument("--max-threads", type=int, default=20, help="Maximum thread count to test")
     parser.add_argument("--step-threads", type=int, default=2, help="Thread counts to step by")
-    parser.add_argument("--repeat", type=int, default=3, help="Repetitions per thread count")
+    parser.add_argument("--repeat", type=int, default=3, help="Number of repetitions of calls to the script, to average down noise.")
     parser.add_argument("--output", default="benchmark_results", help="Output CSV/PNG filename")
     parser.add_argument("--no-plot", action="store_true", help="Skip plotting results")
 
