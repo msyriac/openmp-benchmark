@@ -4,7 +4,7 @@ import numpy as np
 
 shape,wcs = enmap.fullsky_geometry(res=2.0*u.arcmin)
 imap = enmap.ones(shape,wcs)
-lmax = 4000
+lmax = 5400
 
 def compute():
     a = cs.map2alm(imap,lmax=lmax)

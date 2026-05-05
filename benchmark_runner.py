@@ -148,7 +148,7 @@ def main():
         thread_list = [int(x) for x in args.thread_list.split(',')]
     else:
         print(args.thread_list)
-        thread_list = range(min_threads, max_threads + step_threads, step_threads)
+        thread_list = range(args.min_threads, args.max_threads + args.step_threads, args.step_threads)
 
     df = benchmark(
         args.script,
